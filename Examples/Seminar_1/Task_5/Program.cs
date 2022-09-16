@@ -4,15 +4,38 @@
 4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4"
 2 -> " -2, -1, 0, 1, 2"       */
 
-Console.WriteLine("Введите число ");
+/* Console.WriteLine("Введите число ");
 
 int N = Convert.ToInt32(Console.ReadLine());
-int reverseN = -N; 
-int count = 0;
+int count = -N; 
 
-while (count == N)
+while (count <= N)
+{ 
+    Console.Write($"{count}, ");
+    count++;
+}  
+ вверху код - если вводишь положительное число, а если любое (с отрицательным) - код ниже */
+
+ Console.WriteLine("Введите число ");
+
+int N = Convert.ToInt32(Console.ReadLine());
+int count = -N; 
+
+if (N>=0)
 {
-    /* не знаю как записать - либо массив, либо в строку, либо еще как -и надо ли N отрицательные см? */    
+    while (count <= N)
+    { 
+    Console.Write($"{count}, ");
+    count++;
+    }  
+}
+else 
+{
+    while (N <= -N)
+    { 
+    Console.Write($"{N}, ");
+    N++;
+    }  
 }
 
-Console.WriteLine(reverseN);
+
