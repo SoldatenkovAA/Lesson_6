@@ -35,14 +35,27 @@ if (secondNumber > max)
     max = secondNumber;
     Console.WriteLine($"Большее число - второе ({secondNumber}), а меньшее - первое ({firstNumber})");
 }
-else 
+else if(firstNumber > secondNumber)
 {
-    if(firstNumber > secondNumber)
-    {
-        Console.WriteLine($"Большее число - первое ({firstNumber}), а меньшее - второе ({secondNumber})");
-    }
-    if(firstNumber==secondNumber)
-    {
-        Console.WriteLine("Весьма остроумно! Вы ввели два одинаковых числа :)");
-    }
+    Console.WriteLine($"Большее число - первое ({firstNumber}), а меньшее - второе ({secondNumber})");
 }
+else if(firstNumber==secondNumber)
+{
+    Console.WriteLine("Весьма остроумно! Вы ввели два одинаковых числа :)");
+}
+
+/*
+код учителя - внес правки (прикольное решение через else if - буду знать!!!)
+if (secondNumber > max)
+{
+max = secondNumber;
+Console.WriteLine($"Большее число - второе ({secondNumber}), а меньшее - первое ({firstNumber})");
+}
+else if(firstNumber > secondNumber)
+{
+Console.WriteLine($"Большее число - первое ({firstNumber}), а меньшее - второе ({secondNumber})");
+} else if(firstNumber==secondNumber)
+{
+Console.WriteLine("Весьма остроумно! Вы ввели два одинаковых числа :)");
+}
+*/
