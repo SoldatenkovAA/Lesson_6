@@ -24,8 +24,7 @@ printColorText("Введите число для нахождения суммы
 int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 
 int result = getSumOfDigits(number);
-printColorText($"Сумма цифр в числе {number} будет равна {result}", ConsoleColor.DarkGreen);
-
+printColorText($"Сумма цифр в данном числе будет равна {result}", ConsoleColor.DarkGreen);
 
 
 
