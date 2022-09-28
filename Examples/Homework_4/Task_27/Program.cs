@@ -2,8 +2,38 @@
 452 -> 11
 82 -> 10
 9012 -> 12      */
+void printColorText(string information, ConsoleColor color)    // функция добавления цвета в шрифт
+{
+    Console.ForegroundColor = color;
+    Console.WriteLine(information);
+    Console.ResetColor();
+}
 
-//можно через логарифм найти кол-во цифр,
-// а далее уже в форе поставить это ограничителем (если понадобится), и путем % складывания остатков решить
+int getSumOfDigits(int number) //функция нахождения суммы цифр в числе
+{
+    int result = 0;
+    while(number > 0)
+    {
+        result = result + number % 10;
+        number = number / 10;
+    }
+    return result;
+}
 
-//либо что-то другое
+printColorText("Введите число для нахождения суммы цифр в нем", ConsoleColor.DarkMagenta);
+int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+
+int result = getSumOfDigits(number);
+printColorText($"Сумма цифр в числе {number} будет равна {result}", ConsoleColor.DarkGreen);
+
+
+
+
+
+
+
+
+
+
+
+
