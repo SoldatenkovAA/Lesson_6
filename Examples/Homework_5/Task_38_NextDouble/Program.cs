@@ -7,12 +7,12 @@ void printColorTextInConsole(string information, ConsoleColor color)
     Console.WriteLine(information);
     Console.ResetColor();
 }
-double[] getArrayOfNumbersWithTwoDigitsAfterPoint(int length, int firstPoint, int lastPoint)
+double[] getArrayOfNumbersWithTwoDigitsAfterPoint(int length)
 {
     double[] newArray = new double[length];
     for (int i = 0; i < length; i++)
     {
-        newArray[i] = Math.Round(new Random().Next(firstPoint, lastPoint) * 0.01, 2); 
+        newArray[i] = Math.Round(new Random().NextDouble() * 100, 2);
     }
     return newArray;
 }
@@ -48,8 +48,9 @@ double differenceBetweenMaxAndMinInArray(double[] incomingArray)
     return Math.Round((max - min), 2);
 }
 
-double[] currentArray = getArrayOfNumbersWithTwoDigitsAfterPoint(10, 100, 10000);
+double[] currentArray = getArrayOfNumbersWithTwoDigitsAfterPoint(10);
 printArray(currentArray);
 double differenceMaxAndMin = differenceBetweenMaxAndMinInArray(currentArray);
-printColorTextInConsole($"Разница между максимальным и минимальным элементами массива составляет {differenceMaxAndMin}", ConsoleColor.DarkGreen);
+printColorTextInConsole($"Разница между максимальным и минимальным элементами массива составляет {differenceMaxAndMin}", ConsoleColor.DarkBlue);
+
 
