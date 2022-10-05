@@ -11,7 +11,7 @@ void checkOnThreeDigitsAndSearchSecondDigit(int anyNumber)
         int secondDigit = anyNumber / 10 % 10;
         Console.WriteLine($"Второй цифрой числа {anyNumber} будет цифра {secondDigit}");
     }
-    else 
+    else  
     {
         Console.WriteLine("Вы ввели не трехзначное число, попробуйте еще раз");
     }

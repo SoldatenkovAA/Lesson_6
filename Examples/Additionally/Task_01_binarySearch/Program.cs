@@ -62,3 +62,4 @@ Console.WriteLine();
 
 int pos = IndexOf(massive, needNum);
 Console.WriteLine($"Индексом числа {needNum} будет {pos}");
+
